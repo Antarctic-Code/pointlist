@@ -1,0 +1,6 @@
+BD_URL=postgres://postgres:123456@localhost:5432/pointlist
+URL_FRONTEND=http://localhost:3000,http://localhost:8000
+SECRETO=SECRETO
+KEY=KEY
+HOST=0.0.0.0
+PORT=8080
