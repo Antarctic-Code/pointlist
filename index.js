@@ -5,9 +5,10 @@ const route = require('./routes');
 require('dotenv').config({path: '.env'});
 //const bodyParser = require('body-parser');
 
-/*
+
 //conexion con la BD
 const db = require("./config/db");
+/*
 //Modelos
 require("./models/Customer");
 require("./models/NationalIdType");
@@ -25,12 +26,12 @@ require("./models/Transaction");
 require("./models/Order");
 require("./models/Occupation");
 require("./models/Referred");
-
+*/
 db.sync()  //{ alter: true }
     .then(()=> console.log('DB conectada'))
     .catch((error)=>console.log(error));
 
-*/
+
 //Dependencia para que la API responda desde otros origenes
 const cors = require('cors');
 
