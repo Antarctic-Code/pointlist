@@ -8,8 +8,10 @@ require('dotenv').config({path: '.env'});
 
 //conexion con la BD
 const db = require("./config/db");
-/*
+
 //Modelos
+require("./models/Place");
+/*
 require("./models/Customer");
 require("./models/NationalIdType");
 require("./models/CustomerUser");
