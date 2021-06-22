@@ -1,12 +1,13 @@
 const Sequelize = require("sequelize");
 const db = require("../config/db");
+const User = require("./User");
 
 
 const Place = db.define('place', {
     id : {
-        type : Sequelize.UUID,
+        type : Sequelize.INTEGER,
         primaryKey: true,
-        allowNull: false
+        autoIncrement: true
     },
     titulo : {
         type : Sequelize.STRING,
@@ -14,33 +15,6 @@ const Place = db.define('place', {
         validate: {
             notEmpty: {
                 msg: 'Agrega un titulo'
-            }
-        }
-    },
-    descripcion : {
-        type: Sequelize.TEXT,
-        allowNull: false,
-        validate: {
-            notEmpty: {
-                msg: 'Coloca una descripcion'
-            }
-        }
-    },
-    fecha : {
-        type: Sequelize.DATEONLY,
-        allowNull: false,
-        validate: {
-            notEmpty: {
-                msg: 'Coloca una Fecha'
-            }
-        }
-    },
-    hora : {
-        type: Sequelize.TIME,
-        allowNull: false,
-        validate: {
-            notEmpty: {
-                msg: 'Coloca una hora'
             }
         }
     },
@@ -57,7 +31,7 @@ const Place = db.define('place', {
         type: Sequelize.GEOMETRY('POINT')
     }
 });
-
+Place.belongsTo(User);
 
 
 module.exports = Place;

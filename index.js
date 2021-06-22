@@ -11,6 +11,7 @@ const db = require("./config/db");
 
 //Modelos
 require("./models/Place");
+require("./models/User");
 /*
 require("./models/Customer");
 require("./models/NationalIdType");
