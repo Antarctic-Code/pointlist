@@ -11,7 +11,10 @@ const db = new Sequelize(process.env.BD_URL, {
     acquire: 30000,
     idle: 10000
   },
-  logging
+  logging,
+  dialectOptions: {
+      ssl: true
+  }
 });
 
 
