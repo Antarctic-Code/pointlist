@@ -5,3 +5,4 @@ KEY=KEY
 HOST=0.0.0.0
 PORT=8080
 LOG_DB=false  #only TRUE add logs DB
+DB_SSL=FALSE
